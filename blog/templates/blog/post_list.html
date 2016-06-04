@@ -5,12 +5,12 @@
 
 
     <body>
-    	{% for post in posts %}
-	    <div>
-	    	<h2><a href="">{{ post.title }}</a></h1>
-	    	<p>{{ post.text|linebreaks }}</p>
-	    	<p>publi&eacute; le : {{ post.published_date }}</p>
-	    </div>
+        {% for post in posts %}
+        <div>
+            <h2><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
+            <p>publi&eacute; le : {{ post.published_date }}</p>
+        </div>
+        {% endfor %}
     </body>
-    	{% endfor %}
 </html>
