@@ -1,22 +1,16 @@
 <html>
     <head>
-        <title>Léopoldine Mennessier - Design graphique</title>
+        <title>L&eacute;opoldine Mennessier - Design graphique</title>
     </head>
 
 
     <body>
+    	{% for post in posts %}
 	    <div>
-	    	<h1><a href="">Ceci est le titre principal</a></h1>
+	    	<h2><a href="">{{ post.title }}</a></h1>
+	    	<p>{{ post.text|linebreaks }}</p>
+	    	<p>publi&eacute; le : {{ post.published_date }}</p>
 	    </div>
-	    <div>
-    		<h2><a href="">Sous-titre</a></h2>
-        	<p>Hi there!</p>
-        	<p>Date de publication 00/00/00</p>
-        </div>
-        <div>
-        	<h2><a href="">Deuxième sous-titre</a></h2>
-        	<p>It works!</p>
-        	<p>Date de publication 00/00/00</p>
-        </div>
     </body>
+    	{% endfor %}
 </html>
